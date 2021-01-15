@@ -252,6 +252,7 @@ input.onPinPressed(TouchPin.P3, function () {
             . # . . .
             # . . . .
             `).showImage(0)
+        music.playTone(659, music.beat(BeatFraction.Quarter))
         images.createImage(`
             . . . . #
             . . . # .
@@ -267,6 +268,7 @@ input.onPinPressed(TouchPin.P3, function () {
             . # . . .
             # . . . .
             `).showImage(0)
+        music.playTone(165, music.beat(BeatFraction.Quarter))
         images.createImage(`
             . . . . #
             . . . . .
@@ -318,6 +320,7 @@ input.onPinPressed(TouchPin.P3, function () {
             # . . . .
             # . . . .
             `).showImage(0)
+        music.playTone(784, music.beat(BeatFraction.Quarter))
         images.createImage(`
             . # # . .
             . # # . .
@@ -332,6 +335,8 @@ input.onPinPressed(TouchPin.P3, function () {
             # # # . .
             # # # . .
             `).showImage(0)
+        basic.setLedColor(0x00ff00)
+        basic.pause(100)
         images.createImage(`
             . # # # .
             # . . # .
@@ -347,6 +352,8 @@ input.onPinPressed(TouchPin.P3, function () {
             # # # . .
             # # # . .
             `).showImage(0)
+        basic.setLedColor(0xff8000)
+        basic.pause(100)
         images.createImage(`
             . . . . .
             # . . . .
@@ -354,6 +361,7 @@ input.onPinPressed(TouchPin.P3, function () {
             # # # # .
             # # # . .
             `).showImage(0)
+        basic.turnRgbLedOff()
         images.createImage(`
             . . . . .
             # . . . .
@@ -473,6 +481,7 @@ input.onButtonPressed(Button.A, function () {
         . . . . .
         . . . . .
         `).showImage(0)
+    music.playTone(440, music.beat(BeatFraction.Eighth))
     images.createImage(`
         . . . . .
         . . . . .
@@ -657,6 +666,9 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         . . . . .
         `).showImage(0)
+    music.playMelody("E D E C E D E C ", 140)
+    basic.setLedColor(Colors.Blue)
+    basic.pause(100)
     images.createImage(`
         . . . . .
         . . . . .
@@ -664,6 +676,9 @@ input.onButtonPressed(Button.A, function () {
         . . . . .
         . . # . .
         `).showImage(0)
+    music.playMelody("E D E C E D E C ", 140)
+    basic.setLedColor(Colors.Blue)
+    basic.pause(100)
     images.createImage(`
         # # # # #
         # # # # #
@@ -672,6 +687,7 @@ input.onButtonPressed(Button.A, function () {
         # # . # #
         `).showImage(0)
     basic.setLedColor(Colors.Blue)
+    basic.pause(100)
     images.createImage(`
         # # # # #
         # # # # #
@@ -679,7 +695,7 @@ input.onButtonPressed(Button.A, function () {
         # # . # #
         # # . # #
         `).showImage(0)
-    basic.showString("für Matthias...")
+    basic.setLedColor(Colors.Blue)
     images.createImage(`
         # # . # #
         # # . # #
@@ -695,7 +711,8 @@ input.onButtonPressed(Button.A, function () {
         . # . # .
         # . . . #
         `).showImage(0)
-    basic.showIcon(IconNames.Heart)
+    basic.pause(100)
+    basic.showIcon(IconNames.Tortoise)
     basic.clearScreen()
 })
 input.onPinPressed(TouchPin.P2, function () {
