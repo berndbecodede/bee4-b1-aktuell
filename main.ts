@@ -721,30 +721,6 @@ input.onPinPressed(TouchPin.P2, function () {
 input.onGesture(Gesture.Shake, function () {
     control.reset()
 })
-input.onButtonPressed(Button.AB, function () {
-    images.createBigImage(`
-        . . . . . . . . . #
-        # . # . . # . . . .
-        . # . # . . . # . .
-        . . # . # . # # . .
-        . . . # . . . . . .
-        `).showImage(0)
-    images.createBigImage(`
-        . . . . . . . . . #
-        # . # . . # . . . .
-        . # . # . . . # . .
-        . . # . # . # # . .
-        . . . # . . . . . .
-        `).showImage(1)
-    images.createBigImage(`
-        . . . . . . . . . #
-        # . # . . # . . . .
-        . # . # . . . # . .
-        . . # . # . # # . .
-        . . . # . . . . . .
-        `).showImage(1)
-    basic.clearScreen()
-})
 input.onButtonPressed(Button.B, function () {
     basic.showString("B")
     basic.showIcon(IconNames.ArrowNorth)
