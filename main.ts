@@ -420,10 +420,6 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         . . . . .
         `).showImage(0)
-    basic.setLedColor(Colors.Blue)
-    music.playMelody("B D B D B D B D ", 174)
-    basic.pause(100)
-    basic.setLedColor(Colors.Blue)
     images.createImage(`
         . . . . .
         . . . . .
@@ -432,18 +428,21 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         `).showImage(0)
     basic.setLedColor(Colors.Blue)
-    basic.pause(100)
-    basic.setLedColor(Colors.Blue)
-    images.createImage(`
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
-        # # . # #
-        `).showImage(0)
+    basic.pause(1000)
     music.playMelody("B D B D B D B D ", 140)
     basic.setLedColor(Colors.Blue)
-    basic.pause(100)
+    basic.pause(1000)
+    basic.setLedColor(Colors.Blue)
+    basic.turnRgbLedOff()
+    images.createImage(`
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        # # . # #
+        `).showImage(0)
+    basic.setLedColor(Colors.Blue)
+    basic.pause(1000)
     basic.setLedColor(Colors.Blue)
     images.createImage(`
         # # # # #
@@ -452,9 +451,7 @@ input.onButtonPressed(Button.A, function () {
         # # . # #
         # # . # #
         `).showImage(0)
-    basic.setLedColor(Colors.Blue)
-    basic.pause(100)
-    basic.setLedColor(Colors.Blue)
+    basic.turnRgbLedOff()
     images.createImage(`
         # # . # #
         # # . # #
@@ -462,7 +459,10 @@ input.onButtonPressed(Button.A, function () {
         # # . # #
         # # . # #
         `).showImage(0)
-    basic.setLedColor(Colors.Off)
+    basic.setLedColor(Colors.Blue)
+    music.playMelody("B D B D B D B D ", 174)
+    basic.pause(1000)
+    basic.setLedColor(Colors.Blue)
     images.createImage(`
         # . . . #
         . # . # .
@@ -470,37 +470,207 @@ input.onButtonPressed(Button.A, function () {
         . # . # .
         # . . . #
         `).showImage(0)
+    basic.setLedColor(Colors.Off)
     basic.clearScreen()
 })
 input.onPinPressed(TouchPin.P2, function () {
     basic.showLeds(`
-        # # . # .
+        . . . . #
+        . . . . #
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . #
+        . . . . #
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . #
+        . . . . #
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . #
+        . . . . #
+        `)
+    basic.showLeds(`
+        . . . # .
+        . . . # .
+        . . . . .
+        . . . . #
+        . . . . #
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . # .
+        . . . # .
+        . . . . #
+        . . . . #
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . # .
+        . . . # #
+        . . . . #
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . # #
+        . . . # #
+        `)
+    basic.showLeds(`
+        # . . . .
+        . . . . .
+        . . . . .
+        . . . # #
+        . . . # #
+        `)
+    basic.showLeds(`
+        # . . . .
+        # . . . .
+        . . . . .
+        . . . # #
+        . . . # #
+        `)
+    basic.showLeds(`
         # # . . .
+        # . . . .
+        . . . . .
+        . . . # #
+        . . . # #
+        `)
+    basic.showLeds(`
+        # # . . .
+        # # . . .
+        . . . . .
+        . . . # #
+        . . . # #
+        `)
+    basic.showLeds(`
+        # # . . .
+        . # . . .
+        # . . # .
+        . . . . #
+        . . . # #
+        `)
+    basic.showLeds(`
+        # # . . .
+        . # . # .
+        . . . . .
+        # . . . #
+        . . . # #
+        `)
+    basic.showLeds(`
+        # # . # .
+        . # . . .
+        . . . . .
+        . . . . #
+        # . . # #
+        `)
+    basic.showLeds(`
+        # # . . .
+        . # . . .
         . . . . .
         . . . . #
         . . . # #
         `)
     basic.showLeds(`
         # # . . .
-        # # . # .
         . . . . .
-        . . . . #
+        . # . . #
+        . . . . .
         . . . # #
         `)
     basic.showLeds(`
         # # . . .
-        # # . . .
+        . . . . #
         . . . . .
-        . . . # #
+        . # . . .
         . . . # #
         `)
+    basic.showLeds(`
+        # # . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . # #
+        `)
+    basic.clearScreen()
 })
 input.onGesture(Gesture.Shake, function () {
     control.reset()
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showString("B")
     music.playTone(440, music.beat(BeatFraction.Sixteenth))
+    basic.showLeds(`
+        # . . # .
+        # # # . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        # . # . .
+        # . . # .
+        # # # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        # . # . .
+        # . . # .
+        # . # . .
+        # . . # .
+        # # # . .
+        `)
+    basic.showLeds(`
+        # # # . .
+        # . . # .
+        # . # . .
+        # . . # .
+        # # # . .
+        `)
+    basic.showLeds(`
+        # # # . .
+        # . . # .
+        # . # . .
+        # . . # .
+        . . . . .
+        `)
+    basic.showLeds(`
+        # # # . .
+        # . . # .
+        # . # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        # # # . .
+        # . . # .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        # # # . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.clearScreen()
 })
 input.onPinPressed(TouchPin.P1, function () {
     basic.showLeds(`
@@ -532,7 +702,7 @@ input.onPinPressed(TouchPin.P1, function () {
         . . # . .
         `)
     basic.showLeds(`
-        . . # . .
+        . . # . #
         . . . . .
         . . # . .
         . . # . .
@@ -540,7 +710,7 @@ input.onPinPressed(TouchPin.P1, function () {
         `)
     basic.showLeds(`
         . . . . .
-        . . # . .
+        . . # . #
         . . # . .
         . . # . .
         . . # . .
@@ -548,7 +718,7 @@ input.onPinPressed(TouchPin.P1, function () {
     basic.showLeds(`
         . # . . .
         . . # . .
-        . . # . .
+        . . # . #
         . . # . .
         . . # . .
         `)
@@ -556,7 +726,7 @@ input.onPinPressed(TouchPin.P1, function () {
         . . . . .
         . # # . .
         . . # . .
-        . . # . .
+        . . # . #
         . . # . .
         `)
     basic.showLeds(`
@@ -564,8 +734,9 @@ input.onPinPressed(TouchPin.P1, function () {
         . . # . .
         . # # . .
         . . # . .
-        . . # . .
+        . . # . #
         `)
+    basic.clearScreen()
 })
 basic.clearScreen()
 basic.setLedColor(0x00ff00)
