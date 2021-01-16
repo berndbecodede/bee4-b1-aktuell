@@ -30,6 +30,7 @@ input.onPinPressed(TouchPin.P3, function () {
             . . . # .
             . . . . #
             `).showImage(0)
+        music.playTone(262, music.beat(BeatFraction.Sixteenth))
         images.createImage(`
             # . . . .
             . # . . .
@@ -51,6 +52,7 @@ input.onPinPressed(TouchPin.P3, function () {
             . . . # .
             . . . . #
             `).showImage(0)
+        music.playTone(523, music.beat(BeatFraction.Sixteenth))
         images.createImage(`
             # . . . .
             . . . . .
@@ -418,9 +420,10 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         . . . . .
         `).showImage(0)
-    music.playMelody("E D E C E D E C ", 140)
     basic.setLedColor(Colors.Blue)
+    music.playMelody("B D B D B D B D ", 174)
     basic.pause(100)
+    basic.setLedColor(Colors.Blue)
     images.createImage(`
         . . . . .
         . . . . .
@@ -428,9 +431,9 @@ input.onButtonPressed(Button.A, function () {
         . . . . .
         . . # . .
         `).showImage(0)
-    music.playMelody("E D E C E D E C ", 140)
     basic.setLedColor(Colors.Blue)
     basic.pause(100)
+    basic.setLedColor(Colors.Blue)
     images.createImage(`
         # # # # #
         # # # # #
@@ -438,8 +441,10 @@ input.onButtonPressed(Button.A, function () {
         # # # # #
         # # . # #
         `).showImage(0)
+    music.playMelody("B D B D B D B D ", 140)
     basic.setLedColor(Colors.Blue)
     basic.pause(100)
+    basic.setLedColor(Colors.Blue)
     images.createImage(`
         # # # # #
         # # # # #
@@ -447,6 +452,8 @@ input.onButtonPressed(Button.A, function () {
         # # . # #
         # # . # #
         `).showImage(0)
+    basic.setLedColor(Colors.Blue)
+    basic.pause(100)
     basic.setLedColor(Colors.Blue)
     images.createImage(`
         # # . # #
@@ -463,28 +470,102 @@ input.onButtonPressed(Button.A, function () {
         . # . # .
         # . . . #
         `).showImage(0)
-    basic.pause(100)
-    basic.showIcon(IconNames.Tortoise)
     basic.clearScreen()
+})
+input.onPinPressed(TouchPin.P2, function () {
+    basic.showLeds(`
+        # # . # .
+        # # . . .
+        . . . . .
+        . . . . #
+        . . . # #
+        `)
+    basic.showLeds(`
+        # # . . .
+        # # . # .
+        . . . . .
+        . . . . #
+        . . . # #
+        `)
+    basic.showLeds(`
+        # # . . .
+        # # . . .
+        . . . . .
+        . . . # #
+        . . . # #
+        `)
 })
 input.onGesture(Gesture.Shake, function () {
     control.reset()
 })
 input.onButtonPressed(Button.B, function () {
     basic.showString("B")
-    basic.showIcon(IconNames.ArrowNorth)
-    if (input.isGesture(Gesture.LogoUp)) {
-        basic.showIcon(IconNames.ArrowSouth)
-        music.playTone(262, music.beat(BeatFraction.Eighth))
-    } else if (input.isGesture(Gesture.LogoDown)) {
-        basic.showIcon(IconNames.ArrowSouthWest)
-        music.playTone(494, music.beat(BeatFraction.Eighth))
-    } else if (input.isGesture(Gesture.TiltLeft)) {
-        basic.showIcon(IconNames.Heart)
-        basic.setLedColor(0xff0080)
-        basic.setLedColor(Colors.Off)
-        basic.clearScreen()
-    }
+    music.playTone(440, music.beat(BeatFraction.Sixteenth))
+})
+input.onPinPressed(TouchPin.P1, function () {
+    basic.showLeds(`
+        . . # . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . # . .
+        . . # . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . . # . .
+        . . # . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . . # . .
+        . . . . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . # . . .
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . # # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . # # . .
+        . . # . .
+        . . # . .
+        `)
 })
 basic.clearScreen()
 basic.setLedColor(0x00ff00)
